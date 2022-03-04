@@ -9,33 +9,9 @@ int main ()
 	Form	forPro("forPro", 1, 1);
 	
 	newbie.signForm(forPro);
-	try
-	{
-		forPro.beSign(newbie);
-	}
-	catch(const std::exception& e)
-	{
-		std::cout << e.what() << '\n';
-	}
-
 	newbie.signForm(forNewbie);
-	try
-	{
-		forPro.beSign(pro);
-	}
-	catch(const std::exception& e)
-	{
-		std::cout << e.what() << '\n';
-	}
+	pro.signForm(forNewbie);
 	newbie.signForm(forNewbie);
-	try
-	{
-		forPro.beSign(pro);
-	}
-	catch(const std::exception& e)
-	{
-		std::cout << e.what() << '\n';
-	}
-
+	pro.signForm(forPro);
 	return 0;
 }
